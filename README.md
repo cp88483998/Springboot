@@ -1,4 +1,4 @@
 SpringBoot,
 Mybatis-PLUS,
 Druid,
-Shiro,
+Shiro
