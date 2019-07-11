@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false">
+
+    <diskStore path="java.io.tmpdir/cas_web"/>
+    <!-- DefaultCache setting. -->
+
+    <defaultCache
+            maxEntriesLocalHeap="10000"
+            eternal="false"
+            timeToIdleSeconds="300"
+            timeToLiveSeconds="600"
+            overflowToDisk="true"
+            maxEntriesLocalDisk="100000"
+            memoryStoreEvictionPolicy="LFU"/>
+
+    <cache name="score-shiro-kickout-session"
+           maxEntriesLocalHeap="2000"
+           eternal="false"
+           overflowToDisk="true"
+           statistics="true">
+    </cache>
+
+    <cache name="score-shiro-active-session-cache"
+           maxEntriesLocalHeap="2000"
+           eternal="false"
+           overflowToDisk="true"
+           statistics="true">
+    </cache>
+
+    <cache name="score-shiro-authorizationCache"
+           maxElementsInMemory="2000"
+           eternal="false"
+           overflowToDisk="true">
+    </cache>
+
+    <cache name="score-shiro-authenticationCache"
+           maxElementsInMemory="2000"
+           eternal="false"
+           overflowToDisk="false">
+    </cache>
+
+</ehcache>
